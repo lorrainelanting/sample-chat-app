@@ -1,0 +1,50 @@
+OFFICE CHAT
+	MAIN FEATURE: USERS CAN SEND MESSAGES FOR EVERYONE TO SEE
+
+-
+*REGISTER/CREATE ACCT
+*LOG-IN/OUT
+*UPDATE
+*VIEW OTHER MEMBERS
+*DEACTIVATE ACCT
+
+--CHAT--
+*POST
+*DELETE
+
+--DATABASE--
+*USERS TABLE
+	-id
+	-username
+	-password
+	-name
+	-date_created
+	-date_deleted
+	-date_updated
+*MESSAGES TABLE
+	-id
+	-message
+	-sender_id* //users.id//
+	-date_created
+	-date_deleted
+	-date_update
+
+--CONTENT/PAGES (FRONT-END)
+	*HOME
+		-LOG-IN
+		-REGISTER <button> (for no account)
+	*REGISTER PAGE
+		-unregister user's data
+			>name [last_name][first_name][m_name]
+			>email/username
+			>password
+				>confirm_password
+			>employee_id_number
+			>submit <button>
+			----note//after submitting or registered ==> USERS ACCT/PROFILE
+
+	*USERS ACCT/PROFILE
+		-CHAT ROOM
+	*CHAT ROOM
+		-other_members
+		-messages
